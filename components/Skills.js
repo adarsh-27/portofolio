@@ -29,7 +29,7 @@ const Skills = () => {
     { id: 6, title: "Next JS", image: next },
     { id: 7, title: "Tailwind", image: tailwind },
     { id: 8, title: "Node JS", image: node },
-    { id: 9, title: "Express JS", image: express },
+    { id: 9, title: "Express JSa", image: express },
     { id: 10, title: "Mongo DB", image: mongodb },
     { id: 11, title: "My SQL", image: mysql },
     { id: 12, title: "Aceternity UI", image: aceternityui },
