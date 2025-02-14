@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 import { Button } from "./ui/moving-border";
 import hero from "../public/hero.png";
 import Image from "next/image";
-import { TextHoverEffect } from "./ui/text-hover-effect";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const Hero = () => {
@@ -23,11 +22,6 @@ const Hero = () => {
               filter
               className="font-light"
             />
-
-            {/* <p>Full Stack Developer</p> */}
-            {/* <div className="h-12">
-              <TextHoverEffect duration={5} text="Full Stack Developer" />
-            </div> */}
             <h1 className={cn("md:text-4xl text-xl text-white relative z-20")}>
               Hello I&apos;m
             </h1>

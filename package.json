@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tabler/icons-react": "^3.26.0",
+    "@tailwindcss/postcss": "^4.0.6",
     "@tsparticles/engine": "^3.7.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.7.1",

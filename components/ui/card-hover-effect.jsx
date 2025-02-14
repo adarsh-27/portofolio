@@ -1,9 +1,8 @@
+"use client"
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
-import hero from "../../public/hero.png";
 
 export const HoverEffect = ({ items, className }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
@@ -18,7 +17,7 @@ export const HoverEffect = ({ items, className }) => {
       {items.map((item, idx) => (
         <div
           key={item?.id}
-          className="relative group  block p-2 h-full w-full"
+          className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -39,13 +38,15 @@ export const HoverEffect = ({ items, className }) => {
               />
             )}
           </AnimatePresence>
-          <Card className="h-26 w-40 flex justify-center bg-white" >
+          <Card className="h-26 w-40 flex justify-center items-center text-center bg-white" >
+            <div className="flex justify-center items-center flex-col">
             <Image
               src={item?.image}
               alt={item?.title}
               className="h-10 w-10"
               />
             <CardTitle className="text-center">{item.title}</CardTitle>
+              </div>
           </Card>
         </div>
       ))}
@@ -57,7 +58,7 @@ export const Card = ({ className, children }) => {
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-0 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-0 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 ",
         className
       )}
     >
@@ -74,3 +75,5 @@ export const CardTitle = ({ className, children }) => {
     </h4>
   );
 };
+
+

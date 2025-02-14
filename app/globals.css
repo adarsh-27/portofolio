@@ -70,3 +70,7 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.heading{
+  @apply text-5xl  bg-gradient-to-r from-[#16C5E1] to-[#ed64a6] bg-clip-text text-transparent leading-normal;
+}
