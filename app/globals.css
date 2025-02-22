@@ -74,3 +74,14 @@ body {
 .heading{
   @apply text-5xl  bg-gradient-to-r from-[#16C5E1] to-[#ed64a6] bg-clip-text text-transparent leading-normal;
 }
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

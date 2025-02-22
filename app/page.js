@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import Blogs from "@/components/Blogs";
 import Experience from "@/components/Experience";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
@@ -19,8 +20,8 @@ export default function Home() {
         <About/>
         <Skills/>
         <Experience/>
-        <Project/>
-
+        {/* <Project/> */}
+        <Blogs/>
       </div>
     </main>
   );
