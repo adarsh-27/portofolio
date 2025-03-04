@@ -52,9 +52,11 @@ const Skills = () => {
             particleColor="#06B6D1"
           />
         </div>
-        {/* <h1 className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-white relative z-20">
-          Build great products
-        </h1> */}
+        <div className="mr-[1000px]">
+        <h1 className="heading mb-20">Skills.</h1>
+          {/* <h1 className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-white relative z-20">
+          </h1> */}
+        </div>
         <div>
           <HoverEffect items={projects} className="" />
         </div>

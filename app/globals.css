@@ -72,10 +72,8 @@ body {
 }
 
 .heading{
-  @apply text-5xl  bg-gradient-to-r from-[#16C5E1] to-[#ed64a6] bg-clip-text text-transparent leading-normal;
+  @apply text-5xl  bg-gradient-to-r from-[#16C5E1] to-[#0ed3d3] bg-clip-text text-transparent leading-normal;
 }
-
-
 
 @layer base {
   * {
