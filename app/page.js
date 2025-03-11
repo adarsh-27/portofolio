@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Blogs from "@/components/Blogs";
+import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
@@ -22,6 +23,7 @@ export default function Home() {
         <Experience/>
         {/* <Project/> */}
         <Blogs/>
+        <Contact/>
       </div>
     </main>
   );

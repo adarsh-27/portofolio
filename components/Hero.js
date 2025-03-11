@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="flex flex-col gap-4">
             <TextGenerateEffect
               words={words}
-              duration={1}
+              duration={2}
               filter
               className="font-light"
             />

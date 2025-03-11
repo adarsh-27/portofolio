@@ -3,11 +3,12 @@ import blogs from "@/constants/blogs";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import Image from "next/image";
 import Link from "next/link";
+import { TextHoverEffect } from "./ui/text-hover-effect";
 
 
 const Blogs = () => {
   return (
-    <div className="">
+    <div className="h-screen">
       <div className="ml-96">
         <h1 className="heading my-20">Latest Blogs.</h1>
       </div>
@@ -16,7 +17,7 @@ const Blogs = () => {
           {blogs.map((blog, index) => (
             <div
               key={index}
-              className="h-[30rem] w-full flex items-center justify-center mb-40"
+              className=" w-full flex items-center justify-center mb-40"
             >
               
               <CardContainer className="inter-var">
@@ -50,7 +51,7 @@ const Blogs = () => {
                       as={Link}
                       href={blog.pinLink}
                       target="__blank"
-                      className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                      className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white hover:underline hover:underline-offset-4"
                     >
                       Read now →
                     </CardItem>
