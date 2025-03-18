@@ -10,7 +10,7 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
 const Hero = () => {
   const words = "Full Stack Developer";
   return (
-    <div>
+    <div id="home">
       <div className="h-screen relative w-screen flex flex-col justify-center items-center rounded-lg bg-black overflow-hidden">
         <div className="absolute inset-0 w-full h-full  bg-black z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
         <Boxes />

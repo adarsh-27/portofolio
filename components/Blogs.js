@@ -3,12 +3,11 @@ import blogs from "@/constants/blogs";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import Image from "next/image";
 import Link from "next/link";
-import { TextHoverEffect } from "./ui/text-hover-effect";
 
 
 const Blogs = () => {
   return (
-    <div className="h-screen">
+    <div className="h-screen" id="blogs">
       <div className="ml-96">
         <h1 className="heading my-20">Latest Blogs.</h1>
       </div>

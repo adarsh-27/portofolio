@@ -39,7 +39,7 @@ const Skills = () => {
     { id: 16, title: "Fire Base", image: firebase },
   ];
   return (
-    <div>
+    <div id="skills">
       <div className="h-screen relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
         <div className="w-full absolute inset-0 h-screen">
           <SparklesCore
@@ -53,9 +53,7 @@ const Skills = () => {
           />
         </div>
         <div className="mr-[1000px]">
-        <h1 className="heading mb-20">Skills.</h1>
-          {/* <h1 className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-white relative z-20">
-          </h1> */}
+          <h1 className="heading mb-20">Skills.</h1>
         </div>
         <div>
           <HoverEffect items={projects} className="" />

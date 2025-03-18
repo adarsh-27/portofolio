@@ -10,12 +10,10 @@ import {
 import { TracingBeam } from "./ui/tracing-beam";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 import { HoverEffect } from "./ui/expirencr-card-hover-effect";
-import Image from "next/image";
-import BackgroundGradient from "./ui/background-gradient";
 
 const Experience = () => {
   return (
-    <div>
+    <div id="experiences">
       <div className="ml-96">
         <h1 className="heading mt-20">Experience.</h1>
         <TypewriterEffectSmooth words={wordsExperience} />

@@ -6,7 +6,7 @@ import { Button } from "./ui/moving-border";
 
 const About = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-black" id="about">
       <LampContainer className="">
         <motion.h1
           initial={{ opacity: 0.5, y: 100 }}

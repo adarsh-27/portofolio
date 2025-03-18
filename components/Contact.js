@@ -1,14 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
-import { globeConfig, sampleArcs } from "@/constants/globe";
-import dynamic from "next/dynamic";
-
-const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
-  ssr: false,
-});
+import emailjs from "emailjs-com";
+import toast, { Toaster } from "react-hot-toast";
+import WorldMap from "./WorldMap";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -22,14 +19,50 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted", formData);
+
+    const templateParams = {
+      from_name: formData.firstname,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    };
+
+    try {
+      const response = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
+      );
+
+      if (response.status === 200) {
+        console.log("Email sent successfully:", response);
+
+        toast.success("Message sent successfully!", {duration:5000});
+
+        setFormData({
+          firstname: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast.error("Failed to send message. Please try again.", {duration: 6000});
+    }
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const MemoizedGlobe = useCallback(<WorldMap />, []);
+
   return (
-    <div className="flex justify-center items-center gap-x-28 h-screen">
-      <div className="max-w-md w-full rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black dark:bg-black">
+    <div className="flex justify-center items-center gap-x-28 h-screen" id="contact">
+      <Toaster position="top-right" reverseOrder={false} />
+
+      <div className="max-w-lg w-full rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black dark:bg-black">
         <h2 className="font-bold text-xl text-neutral-200 dark:text-neutral-200">
           Let&apos;s build something awesome together
         </h2>
@@ -94,8 +127,9 @@ const Contact = () => {
           </button>
         </form>
       </div>
-      <div className="relative w-2/6 h-4/6 ">
-        <World data={sampleArcs} globeConfig={globeConfig} />
+      <div className="relative w-2/6 h-4/6">
+       {/* <WorldMap/> */}
+       {MemoizedGlobe}
       </div>
     </div>
   );
