@@ -35,7 +35,7 @@ export const LampContainer = ({
         className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 ">
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
-          whileInView={{ opacity: 1, width: "30rem" }}
+          whileInView={{ opacity: 1, width: "min(80vw, 28rem)" }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -52,7 +52,7 @@ export const LampContainer = ({
         </motion.div>
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
-          whileInView={{ opacity: 1, width: "30rem" }}
+          whileInView={{ opacity: 1, width: "min(80vw, 28rem)" }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -75,7 +75,7 @@ export const LampContainer = ({
           className="absolute inset-auto z-50 h-36 w-[28rem] -translate-y-1/2 rounded-full bg-cyan-500 opacity-50 blur-3xl"></div>
         <motion.div
           initial={{ width: "8rem" }}
-          whileInView={{ width: "16rem" }}
+          whileInView={{ opacity: 1, width: "min(80vw, 28rem)" }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -84,7 +84,7 @@ export const LampContainer = ({
           className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-cyan-400 blur-2xl"></motion.div>
         <motion.div
           initial={{ width: "15rem" }}
-          whileInView={{ width: "30rem" }}
+          whileInView={{ opacity: 1, width: "min(80vw, 28rem)" }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -95,7 +95,8 @@ export const LampContainer = ({
         <div
           className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-black "></div>
       </div>
-      <div className="relative z-50 flex -translate-y-80 flex-col items-center px-5">
+      <div className="relative z-50 flex -translate-y-52 sm:-translate-y-80 flex-col items-center px-5">
+
         {children}
       </div>
     </div>)

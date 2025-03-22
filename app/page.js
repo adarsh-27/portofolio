@@ -15,9 +15,9 @@ export default function Home() {
         <FloatingNav navItems={navItems}/>
         <Hero />
         <About />
+        <Project/>
         <Skills />
         <Experience />
-        {/* <Project/> */}
         <Blogs />
         <Contact />
       </div>

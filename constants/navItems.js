@@ -10,38 +10,38 @@ const navItems = [
     {
       name: "Home",
       link: "#home",
-      icon: <IoHomeOutline className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <IoHomeOutline className="h-4 w-4 text-black dark:text-white" />,
     },
     {
       name: "About",
       link: "#about",
-      icon: <LiaInfoSolid className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <LiaInfoSolid className="h-4 w-4 text-text-black dark:text-white" />,
     },
     {
       name: "Projects",
       link: "#projects",
-      icon: <IconPresentationAnalytics className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <IconPresentationAnalytics className="h-4 w-4 text-text-black dark:text-white" />,
     },
     {
       name: "Skills",
       link: "#skills",
-      icon: <IoBulbOutline className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <IoBulbOutline className="h-4 w-4 text-text-black dark:text-white" />,
     },
     {
       name: "Experience",
       link: "#experiences",
-      icon: <RiUserStarLine className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <RiUserStarLine className="h-4 w-4 text-text-black dark:text-white" />,
     },
     {
       name: "Blogs",
       link: "#blogs",
-      icon: <ImBlog className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <ImBlog className="h-4 w-4 text-text-black dark:text-white" />,
     },
     {
       name: "Contact",
       link: "#contact",
       icon: (
-        <BiMessageDetail className="h-4 w-4 text-neutral-500 dark:text-white" />
+        <BiMessageDetail className="h-4 w-4 text-text-black dark:text-white" />
       ),
     },
   ];
