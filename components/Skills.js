@@ -20,7 +20,7 @@ import aceternityui from "../public/aceternityui.png";
 import firebase from "../public/firebase.png";
 
 const Skills = () => {
-  const projects = [
+  const skills = [
     { id: 1, title: "HTML", image: html },
     { id: 2, title: "CSS", image: css },
     { id: 3, title: "JavaScript", image: javascript },
@@ -40,7 +40,10 @@ const Skills = () => {
   ];
   return (
     <div id="skills">
-      <div className="h-screen relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+      <div className="">
+          <h1 className="heading mb-5 text-center md:text-left md:ml-40">Skills.</h1>
+        </div>
+      <div className="min-h-screen relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
         <div className="w-full absolute inset-0 h-screen">
           <SparklesCore
             id="tsparticlesfullpage"
@@ -52,11 +55,9 @@ const Skills = () => {
             particleColor="#06B6D1"
           />
         </div>
-        <div className="mr-[1000px]">
-          <h1 className="heading mb-20">Skills.</h1>
-        </div>
+
         <div>
-          <HoverEffect items={projects} className="" />
+          <HoverEffect items={skills} className="" />
         </div>
       </div>
     </div>

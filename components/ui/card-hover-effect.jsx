@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
@@ -10,7 +10,7 @@ export const HoverEffect = ({ items, className }) => {
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-2 flex-wrap",
         className
       )}
     >
@@ -38,15 +38,17 @@ export const HoverEffect = ({ items, className }) => {
               />
             )}
           </AnimatePresence>
-          <Card className="h-36 w-48 flex justify-center items-center text-center bg-white" >
+          <Card className="h-28 w-40 flex justify-center items-center text-center bg-white">
             <div className="flex justify-center items-center flex-col">
-            <Image
-              src={item?.image}
-              alt={item?.title}
-              className="h-14 w-14"
+              <Image
+                src={item?.image}
+                alt={item?.title}
+                className="h-10 w-10"
               />
-            <CardTitle className="text-center text-lg">{item.title}</CardTitle>
-              </div>
+              <CardTitle className="text-center text-lg">
+                {item.title}
+              </CardTitle>
+            </div>
           </Card>
         </div>
       ))}
@@ -75,5 +77,3 @@ export const CardTitle = ({ className, children }) => {
     </h4>
   );
 };
-
-
