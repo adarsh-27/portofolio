@@ -18,6 +18,8 @@ import github from "../public/github.png";
 import aws from "../public/aws.png";
 import aceternityui from "../public/aceternityui.png";
 import firebase from "../public/firebase.png";
+import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+import { wordsSkills } from "@/constants/skills";
 
 const Skills = () => {
   const skills = [
@@ -41,8 +43,12 @@ const Skills = () => {
   return (
     <div id="skills">
       <div className="">
-          <h1 className="heading mb-5 text-center md:text-left md:ml-40">Skills.</h1>
-        </div>
+        <h1 className="heading text-center md:text-left md:ml-40">Skills.</h1>
+        <TypewriterEffectSmooth
+          words={wordsSkills}
+          className=" justify-center md:ml-40 md:justify-start"
+        />
+      </div>
       <div className="min-h-screen relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
         <div className="w-full absolute inset-0 h-screen">
           <SparklesCore

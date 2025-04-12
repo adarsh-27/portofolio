@@ -14,9 +14,10 @@ import { HoverEffect } from "./ui/expirencr-card-hover-effect";
 const Experience = () => {
   return (
     <div id="experiences">
-      <div className="ml-96">
-        <h1 className="heading mt-20">Experience.</h1>
-        <TypewriterEffectSmooth words={wordsExperience} />
+      <div className="">
+        <h1 className="heading text-center md:text-left md:ml-40">Experience.</h1>
+        <TypewriterEffectSmooth words={wordsExperience} 
+        className=" justify-center md:ml-40 md:justify-start" />
       </div>
       <div className="flex justify-between items-center">
         <TracingBeam>

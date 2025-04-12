@@ -14,7 +14,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-1  lg:grid-cols-2 px-5 max-lg:ml-5 max-md:px-2",
+        "grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 px-5 max-lg:ml-5 max-md:px-2 ",
         className
       )}
     >
@@ -43,8 +43,8 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <div className="max-lg:mt-8">
-          <div className="absolute top-[10px] left-[24rem] max-lg:left-auto max-lg:right-[20px] max-lg:top-5">
-            <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-gray-800 to-gray-600 max-lg:text-4xl max-md:text-3xl text-nowrap">
+          <div className="absolute left-10 max-sm:top-[10px] max-md:top-[10px] lg:top-[10px] max-xl:top-[10px] max-lg:left-auto max-xl:left-auto">
+            <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-gray-800 to-gray-600 max-lg:text-5xl max-md:text-5xl text-nowrap">
               {item.date}
             </h1>
           </div>
@@ -55,7 +55,7 @@ export const HoverEffect = ({
                 <h1 className="text-slate-500 text-xl mt-4 font-open-sans">{item.designation}</h1>
               </div>
               <div>
-                <img src={item.imageItem} width={20} height={20} className="w-20 h-20 object-contain max-lg:hidden" alt="comapny-images" loading='lazy'/>
+                <img src={item.imageItem} width={20} height={20} className="w-20 h-20 object-contain max-sm:hidden" alt="comapny-images" loading='lazy'/>
               </div>
             </div>
             <CardDescription>
@@ -81,7 +81,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-[600px] p-4  overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 max-lg:mt-30",
+        "rounded-2xl h-full w-full lg:w-[450px] xl:w-[550px] 2xl:w-[650px] p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] border-slate-700 relative z-20 max-lg:mt-30",
         className
       )}
     >
