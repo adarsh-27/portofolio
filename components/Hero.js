@@ -23,7 +23,6 @@ const Hero = () => {
         <div className="absolute inset-0 w-full h-full bg-black z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
         <Boxes />
         <div className="flex flex-col md:flex-row justify-between items-center w-full max-w-5xl mx-auto z-20">
-          {/* Text Content */}
           <div className="flex flex-col gap-4 text-center md:text-left">
             <TextGenerateEffect
               words={words}
@@ -63,16 +62,9 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Image Content */}
-          <div className="w-full md:w-1/2 flex justify-center mt-6 md:mt-0">
+
+          <div className="w-full md:w-1/2 flex justify-center mt-6 md:mt-0 ">
             <SplineWrapper />
-            {/* <Image
-              src={hero}
-              alt="Hero Image"
-              width={400}
-              height={300}
-              className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-contain mx-auto"
-            /> */}
           </div>
         </div>
       </div>

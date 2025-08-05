@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import About from "@/components/About";
 import Blogs from "@/components/Blogs";
 import Contact from "@/components/Contact";
@@ -11,11 +11,19 @@ import Skills from "@/components/Skills";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import navItems from "@/constants/navItems";
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+
+const Spline = dynamic(() => import("@splinetool/react-spline"), {
+  ssr: false,
+});
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() => {
+  useEffect(() => {
+    // preload Spline component as soon as loader starts
+    Spline.preload?.();
+
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
@@ -23,7 +31,7 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-   if (isLoading) {
+  if (isLoading) {
     return <PercentageLoader />;
   }
 
