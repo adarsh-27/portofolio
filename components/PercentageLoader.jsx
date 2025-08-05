@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, animate } from "framer-motion";
+import gsap from "gsap";
 
 export default function PercentageLoader() {
   const [progress, setProgress] = useState(0);
@@ -14,7 +15,7 @@ export default function PercentageLoader() {
       },
     });
 
-    return () => controls.stop(); 
+    return () => controls.stop();
   }, []);
 
   return (

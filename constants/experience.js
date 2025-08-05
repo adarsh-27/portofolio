@@ -35,7 +35,7 @@ export const exp1 = [
     
   ],
     link: "https://freshmentapp.com/",
-    date: "Aug 2022 - Oct 2022",
+    date: "May 2022 - Jul 2022",
     imageItem: "/freshmentLogo.jpg"
   },
 ]
