@@ -5,10 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
-export const HoverEffect = ({
-  items,
-  className,
-}) => {
+export const HoverEffect = ({ items, className }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
@@ -19,9 +16,7 @@ export const HoverEffect = ({
       )}
     >
       {items.map((item, idx) => (
-        <Link
-          href={item?.link}
-          key={item?.link}
+        <div
           className="relative group  block px-8 py-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -43,41 +38,52 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <div className="max-lg:mt-8">
-          <div className="absolute left-10 max-sm:top-[10px] max-md:top-[10px] lg:top-[10px] max-xl:top-[10px] max-lg:left-auto max-xl:left-auto">
-            <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-gray-800 to-gray-600 max-lg:text-5xl max-md:text-5xl text-nowrap">
-              {item.date}
-            </h1>
-          </div>
-          <Card className="mt-12">
-            <div className="flex justify-between items-center">
-              <div>
-                <CardTitle>{item.title}</CardTitle>
-                <h1 className="text-slate-500 text-xl mt-4 font-open-sans">{item.designation}</h1>
-              </div>
-              <div>
-                <img src={item.imageItem} width={20} height={20} className="w-20 h-20 object-contain max-sm:hidden" alt="comapny-images" loading='lazy'/>
-              </div>
+            <div className="absolute left-10 max-sm:top-[10px] max-md:top-[10px] lg:top-[10px] max-xl:top-[10px] max-lg:left-auto max-xl:left-auto">
+              <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-gray-800 to-gray-600 max-lg:text-5xl max-md:text-5xl text-nowrap">
+                {item.date}
+              </h1>
             </div>
-            <CardDescription>
-            <ul style={{listStyleType: 'square'}} className="pl-3">
-              {item.description.map((desc, idx) => (
-                <li key={idx} className="mt-2">{desc}</li>
-              ))}
-            </ul>
-            </CardDescription>
-          </Card>
-      </div>
-
-        </Link>
+            <Card className="mt-12">
+              <div className="flex justify-between items-center">
+                <div>
+                  <CardTitle>
+                    <Link href={item?.link} key={item?.link} target="_blank">
+                      {item.title}
+                    </Link>
+                  </CardTitle>
+                  <h1 className="text-slate-500 text-xl mt-4 font-open-sans">
+                    {item.designation}
+                  </h1>
+                </div>
+                <div>
+                  <img
+                    src={item.imageItem}
+                    width={20}
+                    height={20}
+                    className="w-20 h-20 object-contain max-sm:hidden"
+                    alt="comapny-images"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <CardDescription>
+                <ul style={{ listStyleType: "square" }} className="pl-3">
+                  {item.description.map((desc, idx) => (
+                    <li key={idx} className="mt-2">
+                      {desc}
+                    </li>
+                  ))}
+                </ul>
+              </CardDescription>
+            </Card>
+          </div>
+        </div>
       ))}
     </div>
   );
 };
 
-export const Card = ({
-  className,
-  children,
-}) => {
+export const Card = ({ className, children }) => {
   return (
     <div
       className={cn(
@@ -85,24 +91,23 @@ export const Card = ({
         className
       )}
     >
-        <div className="p-4 max-lg:p-2">{children}</div>
+      <div className="p-4 max-lg:p-2">{children}</div>
     </div>
   );
 };
-export const CardTitle = ({
-  className,
-  children,
-}) => {
+export const CardTitle = ({ className, children }) => {
   return (
-    <h1 className={cn("text-zinc-100 font-bold tracking-wide league-spartan mt-4 text-4xl max-lg:text-4xl leading-normal", className)}>
+    <h1
+      className={cn(
+        "text-zinc-100 font-bold tracking-wide league-spartan mt-4 text-4xl max-lg:text-4xl leading-normal",
+        className
+      )}
+    >
       {children}
     </h1>
   );
 };
-export const CardDescription = ({
-  className,
-  children,
-}) => {
+export const CardDescription = ({ className, children }) => {
   return (
     <h1
       className={cn(

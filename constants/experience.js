@@ -26,16 +26,16 @@ export const wordsExperience = [
 export const exp1 = [
   {
     title: "Freshment",
-    designation: "ReactJs Engineer",
+    designation: "ReactJs Developer",
     description: 
     [ 
-      "Offererd Full Time Role after successful completion of Trainee Program", 
-      "Working with Nextiva (US based staff augmentation project) as a Full Stack Developer",
-      "Migrating the client's website to WordPress using ACF Blocks",
+      "Building a college–company placement platform as React.js Developer & Project Manager.", 
+      "Leading frontend development and managing cross-functional team tasks.",
+      "Enabling direct campus recruitment through seamless platform integration.",
     
   ],
     link: "https://freshmentapp.com/",
-    date: "Aug 2024",
+    date: "Aug 2022 - Oct 2022",
     imageItem: "/freshmentLogo.jpg"
   },
 ]
@@ -46,13 +46,13 @@ export const exp2 = [
     designation: "ReactJs Trainee Developer",
     description: 
     [ 
-      "Offererd Full Time Role after successful completion of Trainee Program", 
-      "Working with Nextiva (US based staff augmentation project) as a Full Stack Developer",
-      "Migrating the client's website to WordPress using ACF Blocks",
+      "Joined as React.js Trainee Developer and deepened knowledge of JavaScript and React.", 
+      "Worked on in-house projects and contributed to a live client-facing project.",
+      "Gained hands-on experience in client communication and real-world development workflows.",
     
   ],
     link: "https://www.solutelabs.com/",
-    date: "Aug 2024",
+    date: "Sep 2022 - Feb 2023",
     imageItem: "/soluteLabs.jpg"
   },
 ]
@@ -63,13 +63,13 @@ export const exp3 = [
     designation: "Freelancing Project",
     description: 
     [ 
-      "Offererd Full Time Role after successful completion of Trainee Program", 
-      "Working with Nextiva (US based staff augmentation project) as a Full Stack Developer",
-      "Migrating the client's website to WordPress using ACF Blocks",
+      "Working as React.js Developer on US-based projects like Aroma Pizza and Pipo's Pizza.", 
+      "Developing responsive UIs and features tailored for food delivery platforms.",
+      "Also contributing to in-house project 'Society Walker' focused on community management.",
     
   ],
     link: "https://harvices.com/",
-    date: "Aug 2024",
+    date: "Mar 2023 - May 2023",
     imageItem: "/harvices_logo.png"
   },
 ]
@@ -80,13 +80,13 @@ export const exp4 = [
     designation: "MERN Stack Developer",
     description: 
     [ 
-      "Offererd Full Time Role after successful completion of Trainee Program", 
-      "Working with Nextiva (US based staff augmentation project) as a Full Stack Developer",
-      "Migrating the client's website to WordPress using ACF Blocks",
+      "Joined as React.js Developer and promoted to MERN Stack Developer.", 
+      "Worked on in-house projects like HR Management System and Book Selling E-commerce platform.",
+      "Gained hands-on experience with Firebase, Supabase, and MySQL integration.",
     
   ],
     link: "https://www.evolutioninfosystem.com/",
-    date: "Aug 2024",
+    date: "Jun 2023 - Nov 2024 ",
     imageItem: "/EvolutionInfosystem.jpg"
   },
 ]
@@ -97,13 +97,13 @@ export const exp5 = [
     designation: "MERN Stack Developer + Shopify Developer",
     description: 
     [ 
-      "Offererd Full Time Role after successful completion of Trainee Program", 
-      "Working with Nextiva (US based staff augmentation project) as a Full Stack Developer",
-      "Migrating the client's website to WordPress using ACF Blocks",
+      "Working as MERN Stack Developer and explored Shopify ecosystem and Remix framework.", 
+      "Building and deploying custom Shopify apps to the Shopify App Store.",
+      "Also developing and customizing Shopify stores for various clients.",
     
   ],
     link: "https://www.crescentek.com/",
-    date: "Aug 2024",
+    date: "Dec 2024 - Present",
     imageItem: "/crescentek.jpg"
   },
 ]
